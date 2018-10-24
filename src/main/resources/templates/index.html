@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html ng-app="greenApp">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="resource/css/bootstrap.min.css">
+    <script src="resource/js/jquery.min.js"></script>
+    <script src="resource/js/bootstrap.min.js"></script>
+    <script src="resource/js/angular.min.js"></script>
+    <script src="resource/js/angular-ui-router.min.js"></script>
+
+    <!--   app js-->
+    <script src="resource/app/app.js"></script>
+
+    <!--   app js-->
+
+    <!--custom css-->
+
+    <link rel="stylesheet" href="resource/css/customCss/navbar.css">
+    <link rel="stylesheet" href="resource/css/customCss/footer.css">
+    <link rel="stylesheet" href="resource/css/customCss/rectangle.css">
+
+    <!--custom css-->
+
+    <!-- custom js-->
+    <script src="resource/pages/inputprocess/inputprocess.js"></script>
+    <script src="resource/pages/viewStudentInfo/viewStudentInfo.js"></script>
+    <script src="resource/pages/studentattendence/studentattendence.js"></script>
+    <script src="resource/pages/giveattendence/giveattendence.js"></script>
+
+    <!-- custom js-->
+
+</head>
+
+<body>
+
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"><img src="resource/img/Logo.png"></a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a ui-sref="home">HOME</a></li>
+                <li><a ui-sref="inputProcess">STUDENT FORM</a></li>
+                <li><a ui-sref="viewStudentInfo">STUDENT INFO</a></li>
+                <li><a ui-sref="giveAttendence">GIVE ATTENDENCE</a></li>
+                <li><a ui-sref="studentAttendence">VIEW ATTENDENCE</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container-fluid" style="margin-top:30px;margin-bottom:10%;">
+
+    <div ui-view></div>
+
+</div>
+
+
+<div class="footer">
+    <p> © 2017-2018 Toushika Islam. All rights reserved.</p>
+</div>
+
+
+</body>
+</html>

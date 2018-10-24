@@ -1,0 +1,58 @@
+<div class="row">
+
+    <div class="col-sm-3"></div>
+
+    <div class="col-sm-6" style="background: #eeeeee;border:3px solid darkseagreen;border-radius:5px;">
+
+        <h3 style="text-align: center;color:maroon">Student Information</h3>
+
+        <div style="padding:10px;">
+
+            <form class="form-horizontal" action="/action_page.php">
+
+                <div class="form-group">
+                    <label>Student Id</label>
+                    <input type="text" class="form-control" id="studentId" placeholder="Enter Student Id"
+                           name="studentId" ng-model="student.studentId">
+                </div>
+
+                <div class="form-group">
+                    <label>Course Name</label>
+                    <input type="text" class="form-control" id="course" placeholder="Enter Course Name" name="course" ng-model="student.course">
+                </div>
+
+
+                <div class="form-group">
+                    <label>Student Section</label>
+                    <input type="text" class="form-control" id="section" placeholder="Enter Section" name="section" ng-model="student.section">
+                </div>
+
+                <div class="form-group">
+                    <label>Student Semester</label>
+                    <input type="text" class="form-control" id="semester" placeholder="Enter Semester" name="semester" ng-model="student.semester">
+                </div>
+
+
+                <div class="form-group">
+                    <label>Student Department</label><br/>
+                    <input  type="checkbox" ng-value="CSE" ng-model="student.cseDepartment"> CSE<br/>
+                    <input  type="checkbox" ng-value="EEE" ng-model="student.eeeDepartment"> EEE<br/>
+                    <input  type="checkbox" ng-value="ETE"  ng-model="student.eteDepartment"> ETE<br/>
+                </div>
+
+                <div class="form-group" style="text-align: center;">
+                    <input type="button" class="btn btn-primary" value="Save Info" ng-click="saveStudentRecord()">
+                </div>
+
+            </form>
+        </div>
+
+    </div>
+    <div class="col-sm-3"></div>
+
+</div>
+
+
+
+
+

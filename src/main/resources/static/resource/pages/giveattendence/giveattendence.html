@@ -1,0 +1,43 @@
+<div class="row">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-8">
+        <h3 style="text-align: center;color:#4DB848;padding-top:2%;padding-bottom:2%;">Attendence Sheet</h3>
+        <div ng-init="viewAllStudents()">
+            <table class="table table-bordered">
+                <tr>
+                    <th>Serial No</th>
+                    <th>Student Id</th>
+                    <th>Present</th>
+                    <th>Absent</th>
+                    <th>Correction</th>
+                </tr>
+
+                <tr ng-repeat="studentInfo in students">
+                    <td>{{$index+1}}</td>
+                    <td>{{studentInfo.studentId}}</td>
+                    <td><input type="radio" id="{{studentInfo.studentId+ '_present'}}" value="present"
+                               ng-click="givePresent(studentInfo.studentId);" style="cursor:pointer"> Present<br></td>
+                    <td><input type="radio" id="{{studentInfo.studentId+ '_absent'}}" value="absent"
+                               ng-click="giveAbsent(studentInfo.studentId)" style="cursor:pointer"> Absent<br></td>
+                    <td><p id="{{studentInfo.studentId+ '_refresh'}}" ng-click="refresh(studentInfo.studentId)"><img
+                            src="resource/img/refresh.png" style="cursor:pointer"></p></td>
+                </tr>
+
+            </table>
+
+            <a class="btn btn-primary" ui-sref="studentAttendence">View Attendence Sheet</a>
+
+            <!--    <input type="button"  class="btn btn-primary" name="submitAttendenceInfo" id="submitAttendenceInfo" value="submit" ng-click="addAttendence(studentInfo)">-->
+
+
+        </div>
+    </div>
+
+</div>
+
+<!--<div class="row">
+    <div class="col-sm-4"><input type="button"  class="btn btn-primary" name="submitMovie" id="submitMovie" value="submit" ng-click="addMovies()"></div>
+    <div class="col-sm-8"><input type="button"  class="btn btn-primary" name="submitMovie" id="submitMovie" value="submit" ng-click="addMovies()"></div>
+    <div class="col-sm-4"></div>
+
+</div>-->

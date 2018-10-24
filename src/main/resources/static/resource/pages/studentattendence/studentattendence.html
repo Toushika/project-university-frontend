@@ -1,0 +1,28 @@
+<div class="row">
+    <div class="col-sm-2"></div>
+
+    <div class="col-sm-8">
+        <h3 style="text-align: center;color:#4DB848;padding-top:2%;padding-bottom:2%;">View Attendence Info</h3>
+        <div ng-init="getAttendence()">
+            <table class="table table-bordered">
+                <tr>
+                    <th>Serial No</th>
+                    <th>Student Id</th>
+                    <th>Student Attendence</th>
+                    <th>Attendence Date</th>
+                </tr>
+
+                <tr ng-repeat="attendInfo in attendenceDetails">
+                    <td>{{$index+1}}</td>
+                    <td>{{attendInfo.studentId}}</td>
+                    <td>{{attendInfo.studentAttendence}}</td>
+                    <td>{{attendInfo.attendenceDate}}</td>
+                </tr>
+
+            </table>
+        </div>
+    </div>
+
+    <div class="col-sm-2"></div>
+
+</div>

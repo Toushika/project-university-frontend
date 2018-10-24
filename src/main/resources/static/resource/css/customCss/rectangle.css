@@ -1,0 +1,7 @@
+.rectangle {
+    height: 150px;
+    width: 250px;
+    background-color:#4DB848;
+    border:5px solid #FCF599;
+    cursor: pointer;
+}

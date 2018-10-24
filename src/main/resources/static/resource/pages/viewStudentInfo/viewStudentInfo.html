@@ -1,0 +1,34 @@
+<div class="row">
+    <div class="col-sm-2"></div>
+
+    <div class="col-sm-8">
+        <h3 style="text-align: center;color:#4DB848">View All Student Info</h3>
+        <div ng-init="viewAllStudents()">
+            <table class="table table-bordered">
+                <tr>
+                    <th>Serial No</th>
+                    <th>Student Id</th>
+                    <th>Course</th>
+                    <th>Section</th>
+                    <th>Semester</th>
+                    <th>Department</th>
+                </tr>
+
+                <tr ng-repeat="studentInfo in students">
+                    <td>{{$index+1}}</td>
+                    <td>{{studentInfo.studentId}}</td>
+                    <td>{{studentInfo.course}}</td>
+                    <td>{{studentInfo.section}}</td>
+                    <td>{{studentInfo.semester}}</td>
+                    <td>{{studentInfo.department}}</td>
+                </tr>
+
+            </table>
+        </div>
+    </div>
+
+    <div class="col-sm-2"></div>
+
+</div>
+
+
